@@ -93,3 +93,38 @@ console.log(laptop);
 
 laptop["price"] = 50000;
 console.log(laptop);
+
+// adding property to the object
+laptop.size = "13 inch";
+console.log(laptop);
+
+laptop["weight"] = "3 kgs";
+console.log(laptop);
+
+// delete a property
+delete laptop.size;
+console.log(laptop);
+
+delete laptop["weight"];
+console.log(laptop);
+
+const avionStudent = {
+    name: "John",
+    occupation: "student",
+    batchNumber: 39,
+    // method - reusable code
+    // function keyword
+    introduceYourself: function() {
+        // this keyword - pertains to the object itself
+        console.log(`Hi my name is ${this.name}`);
+        console.log(`My occupation is ${this.occupation}`);
+        console.log(`I belong to batch ${this.batchNumber}`);
+    }
+}
+
+// function call
+avionStudent.introduceYourself();
+console.log(this.name); // undefined since 'this' keyword only works inside the object
+avionStudent["introduceYourself()"]; // this will not work 
+
+avionStudent.introduceYourself();
